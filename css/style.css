@@ -1,0 +1,158 @@
+body {
+	background-image: url("../images/background.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* 
+	Custom CSS Loader
+	eclipse loader by Oli
+	Link:  https://codepen.io/olidafrog/pen/BWQYLv
+ */
+.wrapper {
+	margin: 400px auto;
+}
+
+div.oval {
+	width: 80px;
+  	height: 80px;
+  	border-radius: 50%;
+  	box-shadow: 0px 5px 0 0 #fff;
+  	position:relative;
+  	left:50%;
+  	animation:eclipse 2.5s ease-in-out infinite;
+}
+
+.oval:after {
+  	height:50px;
+  	content:"";
+  	display:block;
+  	border-right:1px solid #fff;
+  	position:relative;
+  	top:-40px;
+  	left:-40px;
+  	animation:line 2.5s ease-in-out infinite;
+}
+
+@keyframes line {
+  	0% {transform:translate(0,0);opacity:0;}
+  	20% {transform:translate(0,50px);opacity:1;}
+  	100% {opacity:0;}
+}
+
+.oval:before {
+  	height:20px;
+  	width:20px;
+  	content:"";
+  	display:block;
+  	border-radius:20px;
+  	background:white;
+  	position:relative;
+  	left:30px;
+  	top:60px;
+  	animation:planet 2.5s ease-in-out infinite;         
+}
+
+@keyframes planet {
+  	0% {opacity:0;}
+  	20% {transform:translate(0,0) scale(1,1);opacity:1;}
+  	100% {transform:translate(0,-100px) scale(0,0);opacity:0;}
+}
+
+
+@keyframes eclipse {
+  	0% {box-shadow: 0px 5px 0 0 #fff;}
+  	70%{box-shadow: 0px 0px 0 0 #fff;opacity:1;}
+  	100%{box-shadow: 0px 0px 0 0 #fff;opacity:0;}
+}
+/* 
+	End of Custom CSS Loader
+	eclipse loader by Oli
+	Link:  https://codepen.io/olidafrog/pen/BWQYLv
+ */
+
+ /* Add animation to "page content" */
+.animate-bottom {
+  	position: relative;
+  	-webkit-animation-name: animatebottom;
+  	-webkit-animation-duration: 1s;
+  	animation-name: animatebottom;
+  	animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  	from { bottom:-100px; opacity:0 } 
+  	to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  	from{ bottom:-100px; opacity:0 } 
+  	to{ bottom:0; opacity:1 }
+}
+
+ #content {
+ 	display: none;
+ 	margin: 50px auto;
+ 	max-width: 1000px;
+ 	min-height: 100px;
+	overflow: hidden;
+ 	background-color: #fff;
+ 	border-radius: 25px;
+ 	padding: 20px;
+ }
+
+ h1 {
+ 	font-family: "Press Start 2P", sans-serif;
+ 	color: #9445b6;
+ 	text-align:  center;
+ }
+
+* {
+  	box-sizing: border-box;
+}
+
+/* Float four columns side by side */
+.column {
+  	float: left;
+  	width: 25%;
+  	padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+	margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  	content: "";
+  	display: table;
+  	clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  	padding: 16px;
+  	text-align: center;
+  	background: rgb(147,98,195);
+	background: linear-gradient(180deg, rgba(147,98,195,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+  	border-radius: 25px;
+  	margin-bottom: 25px;
+}
+
+img {
+	width: 15%;
+	height: 15%;
+	float: left;
+}
+
+.sign {
+	margin: 0px;
+	display: inline-block;
+}
+
+.dates {
+	 margin: 0px;
+	 font-size: 12px;
+}
